@@ -6,6 +6,7 @@
     "dev": "npm run start",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "npm run test && npm run build --prod && firebase deploy",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
