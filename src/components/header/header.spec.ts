@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Header } from './header';
+import { LinkHelper } from 'src/services/link-helper.service';
+import { MockLinkHelper } from 'src/services/link-helper.service.mock';
 
 describe('Header', () => {
   beforeEach(async(() => {
@@ -11,6 +13,9 @@ describe('Header', () => {
       declarations: [
         Header
       ],
+      providers: [
+        { provide: LinkHelper, useClass: MockLinkHelper },
+      ]
     }).compileComponents();
   }));
 

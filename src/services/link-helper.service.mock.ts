@@ -4,4 +4,12 @@ export class MockLinkHelper {
 	public homePage() {
     return this.__genericLinkResult;
   }
+
+  public contactPage() {
+    return this.__genericLinkResult;
+  }
+
+  public tShirtPage() {
+    return this.__genericLinkResult;
+  }
 }

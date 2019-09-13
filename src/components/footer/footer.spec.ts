@@ -1,31 +1,42 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app';
-import { Header } from 'src/components/header/header';
+import { Footer } from './footer';
 import { LinkHelper } from 'src/services/link-helper.service';
 import { MockLinkHelper } from 'src/services/link-helper.service.mock';
-import { Footer } from 'src/components/footer/footer';
 
-describe('AppComponent', () => {
+describe('Footer', () => {
+  let fixture;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent,
-        Header,
         Footer
       ],
       providers: [
         { provide: LinkHelper, useClass: MockLinkHelper },
       ]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(Footer);
+
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should create the footer component', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should have a copywrite year or range defined', () => {
+    const app = fixture.debugElement.componentInstance;
+    app._generateCopyWrite();
+    
+    if(app.startYear === app.currentYear){
+      expect(app.copywrite).toEqual(`${app.currentYear}`)
+    } else {
+      expect(app.copywrite).toEqual(`${app.startYear} - ${app.currentYear}`);
+    }
+  })
 });

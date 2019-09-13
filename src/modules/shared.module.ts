@@ -3,14 +3,17 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LinkHelper } from 'src/services/link-helper.service';
 import { Header } from 'src/components/header/header';
+import { Footer } from 'src/components/footer/footer';
 
 @NgModule({
   imports: [RouterModule, CommonModule],
   declarations: [
-    Header
+    Header,
+    Footer
   ],
   exports: [
-    Header
+    Header,
+    Footer
   ],
   providers: [
     LinkHelper

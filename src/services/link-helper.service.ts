@@ -6,5 +6,12 @@ export class LinkHelper {
 	public homePage() {
 		return '';
   }
-	
+
+  public contactPage() {
+		return '/contact';
+  }
+
+  public tShirtPage() {
+		return '/t-shirts';
+  }
 }
