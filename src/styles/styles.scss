@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+@import '../../node_modules/reset-css/sass/_reset.scss';
+@import '../styles/variables.scss';
+
+body {
+	font-family: 'Muli', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: $primaryColor;
+}
