@@ -1,6 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app';
+import { Header } from 'src/components/header/header';
+import { LinkHelper } from 'src/services/link-helper.service';
+import { MockLinkHelper } from 'src/services/link-helper.service.mock';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,8 +12,12 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        Header
       ],
+      providers: [
+        { provide: LinkHelper, useClass: MockLinkHelper },
+      ]
     }).compileComponents();
   }));
 
@@ -18,18 +25,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'inkandtees'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('inkandtees');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to inkandtees!');
   });
 });
