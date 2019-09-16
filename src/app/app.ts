@@ -19,10 +19,6 @@ export class AppComponent implements OnInit{
         {
           url: this._linkHelper.tShirtPage(),
           label: 'Custom T Shirts'
-        },
-        {
-          url: this._linkHelper.tShirtPage(),
-          label: 'Custom T Shirts'
         }
       ],
       rightNav: [
