@@ -1,11 +1,15 @@
 <div class="inner-container">
   <nav class="desktop-nav">
-    <div *ngFor="let item of navObject.leftNav">
-      <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+    <div class="left-nav">
+      <div *ngFor="let item of navObject.leftNav">
+        <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+      </div>
     </div>
     <img class="logo" [routerLink]="navObject.logoNav.url" src="{{navObject.logoNav.logoUrl}}" alt="{{navObject.logoNav.altText}}">
-    <div *ngFor="let item of navObject.rightNav">
-      <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+    <div class="right-nav">
+      <div *ngFor="let item of navObject.rightNav">
+        <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+      </div>
     </div>
   </nav>
 </div>

@@ -1,4 +1,8 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins/center.scss';
+
+$logoWidth: 15rem;
+$logoOffset: 7.5rem;
 
 :host {
 	position: fixed;
@@ -23,25 +27,42 @@
         outline: none;
         font-size: $remXL;
         color: $primaryColor;
-        
+        margin: 1rem 0.5rem;
+        display: block;
 
         &:hover {
           color: $secondaryColor;
           cursor: pointer;
         }
+      }
 
-        .logo {
-          width: 15rem;
-          height: 5rem;
-          background-color: $primaryColor;
-          margin: 0 1rem;
-          display: block;
-          
-          &:hover {
-            background-color: $secondaryColor;
-          }
+      .logo {
+        width: $logoWidth;
+        height: 5rem;
+        background-color: $primaryColor;
+        display: block;
+        @include absolute-center-h-or-v(true, false);
+        
+        &:hover {
+          background-color: $secondaryColor;
+          cursor: pointer;
         }
-      } 
+      }
+
+      .right-nav, .left-nav {
+        width: calc(50% - 7.5rem);
+        display: flex;        
+      }
+
+      .right-nav {
+        margin-left: 7.5rem;
+        justify-content: flex-start;
+      }
+
+      .left-nav {
+        margin-right: 7.5rem;
+        justify-content: flex-end;
+      }
     }
   }
 }
