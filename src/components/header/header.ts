@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LinkHelper } from 'src/services/link-helper.service';
+import { INavigation } from 'src/interfaces/interfaces';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,6 @@ import { LinkHelper } from 'src/services/link-helper.service';
   styleUrls: ['./header.scss']
 })
 
-export class Header {
-  public homeUrl = this._linkHelper.homePage();
-  public contactUrl = this._linkHelper.contactPage();
-  public tShirtUrl = this._linkHelper.tShirtPage();
-  
-  constructor( private _linkHelper: LinkHelper){}
+export class Header{
+  @Input() navObject: INavigation;
 }

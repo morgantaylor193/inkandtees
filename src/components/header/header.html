@@ -1,8 +1,11 @@
 <div class="inner-container">
-  <!-- Desktop Nav -->
   <nav class="desktop-nav">
-    <span [routerLink]="tShirtUrl" class="nav-item">T-Shirts</span>
-    <span [routerLink]="homeUrl" class="nav-item"><span class="logo"></span></span>
-    <span [routerLink]="contactUrl" class="nav-item">Contact</span>
+    <div *ngFor="let item of navObject.leftNav">
+      <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+    </div>
+    <img class="logo" [routerLink]="navObject.logoNav.url" src="{{navObject.logoNav.logoUrl}}" alt="{{navObject.logoNav.altText}}">
+    <div *ngFor="let item of navObject.rightNav">
+      <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+    </div>
   </nav>
 </div>
