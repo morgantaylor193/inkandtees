@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app';
-import { Header } from 'src/components/header/header';
+import { HeaderCenter } from 'src/components/header-center/header-center';
 import { LinkHelper } from 'src/services/link-helper.service';
 import { MockLinkHelper } from 'src/services/link-helper.service.mock';
 import { Footer } from 'src/components/footer/footer';
@@ -14,7 +14,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        Header,
+        HeaderCenter,
         Footer
       ],
       providers: [
