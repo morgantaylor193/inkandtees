@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { INavigation } from 'src/interfaces/interfaces';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.html',
-  styleUrls: ['./header.scss']
+  selector: 'app-header-center',
+  templateUrl: './header-center.html',
+  styleUrls: ['./header-center.scss']
 })
 
-export class Header{
+export class HeaderCenter {
   @Input() navObject: INavigation;
 }
