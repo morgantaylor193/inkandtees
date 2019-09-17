@@ -1,27 +1,10 @@
 @import '../../styles/variables.scss';
 
 :host {
-  .footer-flex-container {
+  .sub-footer {
     background-color: $primaryColor;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 1rem;
-    
-    .logo-img {
-      width: 4rem;
-      height: 4rem;
-      margin-bottom: 1rem;
-    }
-    
-    .tagline {
-      color: $secondaryColor;
-      font-weight: $fontWeightLight;
-      font-size: $remS;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-  
+      
     .site-credit {
       color: $secondaryColor;
       font-weight: $fontWeightLight;

@@ -16,9 +16,44 @@ $logoOffset: 7.5rem;
     max-width: $desktopMaxWith;
     margin: 0 auto;
 
-    .desktop-nav {
-      margin: 0 auto;
+
+    .mobile-nav {
       display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: $phoneBreakpoint;
+      height: 100vh;
+      background: $primaryColor;
+      color: $white;
+      padding: 3rem 1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+
+      .nav-item {
+        outline: none;
+        font-size: $remXL;
+        color: $white;
+        display: block;
+        padding: 1rem;
+
+        &:hover {
+          color: $secondaryColor;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .desktop-nav {
+      display: none;
+      margin: 0 auto;
       align-items: flex-start;
       justify-content: center;
       padding: 0 2rem;
@@ -36,19 +71,6 @@ $logoOffset: 7.5rem;
         }
       }
 
-      .logo {
-        width: $logoWidth;
-        height: 5rem;
-        background-color: $primaryColor;
-        display: block;
-        @include absolute-center-h-or-v(true, false);
-        
-        &:hover {
-          background-color: $secondaryColor;
-          cursor: pointer;
-        }
-      }
-
       .right-nav, .left-nav {
         width: calc(50% - 7.5rem);
         display: flex;        
@@ -62,6 +84,30 @@ $logoOffset: 7.5rem;
       .left-nav {
         margin-right: 7.5rem;
         justify-content: flex-end;
+      }
+    }
+
+    .logo {
+      width: $logoWidth;
+      height: 5rem;
+      background-color: $primaryColor;
+      display: block;
+      @include absolute-center-h-or-v(true, false);
+      
+      &:hover {
+        background-color: $secondaryColor;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tabletBreakPoint) {
+    .inner-container {
+      .desktop-nav {
+        display: flex;
+      }
+      .mobile-nav {
+        display: none;
       }
     }
   }

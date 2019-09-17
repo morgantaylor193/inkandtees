@@ -15,10 +15,10 @@ export class Footer implements OnInit{
   constructor( private _linkHelper: LinkHelper ) {}
 
   ngOnInit() {
-    this._generateCopyWrite();
+    this.generateCopyWrite();
   }
 
-  public _generateCopyWrite() {
+  public generateCopyWrite() {
     this.copywrite = this.currentYear != this.startYear ? `${this.startYear} - ${this.currentYear}` : `${this.startYear}`;
   }
 }

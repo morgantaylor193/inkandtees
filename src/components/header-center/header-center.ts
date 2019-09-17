@@ -9,4 +9,13 @@ import { INavigation } from 'src/interfaces/interfaces';
 
 export class HeaderCenter {
   @Input() navObject: INavigation;
+  public displayMobNav = false;
+
+  public openNav() {
+    this.displayMobNav = true;
+  }
+
+  public closeNav() {
+    this.displayMobNav = false;
+  }
 }
