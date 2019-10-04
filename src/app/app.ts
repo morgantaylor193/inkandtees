@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
       ],
       logoNav: {
         url: this._linkHelper.homePage(),
-        logoUrl: '../assetts/img/logo.png',
+        logoUrl: '../../assets/img/logo.svg',
         altText: 'Ink & Tees Logo'
       }
     }

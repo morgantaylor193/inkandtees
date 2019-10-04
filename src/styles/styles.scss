@@ -10,3 +10,9 @@ a {
 	text-decoration: none;
 	color: $primaryColor;
 }
+
+.page-padding {
+  padding: 2rem 1rem;
+  max-width: $desktopMaxWith;
+  margin: 0 auto; 
+}

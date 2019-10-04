@@ -1,17 +1,20 @@
+<div class="pre-header">FREE Shipping nation wide on all orders over 100 tees!</div>
 <div class="inner-container">
-  <span (click)="openNav()">Hamburger</span>
-  <img class="logo" [routerLink]="navObject.logoNav.url">
+  <div class="mobile-nav">  
+    <img class="logo" [routerLink]="navObject.logoNav.url" src="{{navObject.logoNav.logoUrl}}" alt="{{navObject.logoNav.altText}}">
+    <span class="hamburger" (click)="openNav()">Hamburger</span>
 
-  <nav *ngIf="displayMobNav" class="mobile-nav">
-    <span (click)="closeNav()" class="close">Close</span>
-    <span (click)="closeNav()" class="nav-item" [routerLink]="navObject.logoNav.url">Home</span>
-    <div *ngFor="let item of navObject.leftNav">
-      <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-    </div>
-    <div *ngFor="let item of navObject.rightNav">
-      <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-    </div>
-  </nav>
+    <nav class="navigation" *ngIf="displayMobNav">
+      <span (click)="closeNav()" class="close">Close</span>
+      <span (click)="closeNav()" class="nav-item" [routerLink]="navObject.logoNav.url">Home</span>
+      <div *ngFor="let item of navObject.leftNav">
+        <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+      </div>
+      <div *ngFor="let item of navObject.rightNav">
+        <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
+      </div>
+    </nav>
+  </div>  
   <nav class="desktop-nav">
     <div class="left-nav">
       <div *ngFor="let item of navObject.leftNav">
