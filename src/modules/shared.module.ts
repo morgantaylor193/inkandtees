@@ -4,16 +4,19 @@ import { CommonModule } from '@angular/common';
 import { LinkHelper } from 'src/services/link-helper.service';
 import { HeaderCenter } from 'src/components/header-center/header-center';
 import { Footer } from 'src/components/footer/footer';
+import { FeatureImage } from 'src/components/feature-image/feature-image';
 
 @NgModule({
   imports: [RouterModule, CommonModule],
   declarations: [
     HeaderCenter,
-    Footer
+    Footer,
+    FeatureImage
   ],
   exports: [
     HeaderCenter,
-    Footer
+    Footer,
+    FeatureImage
   ],
   providers: [
     LinkHelper

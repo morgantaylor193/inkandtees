@@ -1,10 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Footer } from './footer';
+import { FeatureImage } from './feature-image';
 import { LinkHelper } from 'src/services/link-helper.service';
 import { MockLinkHelper } from 'src/services/link-helper.service.mock';
 
-describe('Footer', () => {
+describe('FeatureImage', () => {
   let fixture;
 
   beforeEach(async(() => {
@@ -13,30 +13,19 @@ describe('Footer', () => {
         RouterTestingModule
       ],
       declarations: [
-        Footer
+        FeatureImage
       ],
       providers: [
         { provide: LinkHelper, useClass: MockLinkHelper },
       ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Footer);
+    fixture = TestBed.createComponent(FeatureImage);
 
   }));
 
-  it('should create the footer component', () => {
+  it('should create the feature image component', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it('should have a copywrite year or range defined', () => {
-    const app = fixture.debugElement.componentInstance;
-    app.generateCopyWrite();
-
-    if(app.startYear === app.currentYear){
-      expect(app.copywrite).toEqual(`${app.currentYear}`)
-    } else {
-      expect(app.copywrite).toEqual(`${app.startYear} - ${app.currentYear}`);
-    }
-  })
 });
