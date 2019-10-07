@@ -1,26 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
+import { IntApparel } from './apparel';
 import { RouterTestingModule } from '@angular/router/testing';
-import { FeatureImage } from './feature-image';
+import { FeatureImage } from 'src/components/feature-image/feature-image';
 
-describe('FeatureImage', () => {
-  let fixture;
-
+describe('IntApparel', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
+        IntApparel,
         FeatureImage
-      ],
-      providers: []
+      ]
     }).compileComponents();
-
-    fixture = TestBed.createComponent(FeatureImage);
-
   }));
 
-  it('should create the feature image component', () => {
+  it('should create the home container', () => {
+    const fixture = TestBed.createComponent(IntApparel);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });

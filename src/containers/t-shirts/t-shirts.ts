@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { LinkHelper } from 'src/services/link-helper.service';
 
 @Component({
   selector: 't-shirts',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./t-shirts.scss']
 })
 
-export class IntTShirts implements OnInit {  
-  constructor() {}
-  
-  ngOnInit() {}
+export class IntTShirts {  
+  public contactUrl = this._linkHelper.contactPage();
+
+  constructor(private _linkHelper: LinkHelper) {}
+
+  public buildApparelUrl(id) {
+    return this._linkHelper.apparelPage(id);
+  }
 }

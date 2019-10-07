@@ -14,4 +14,8 @@ export class LinkHelper {
   public tShirtPage() {
 		return '/t-shirts';
   }
+
+  public apparelPage(id) {
+    return `/apparel/${id}`;
+  }
 }

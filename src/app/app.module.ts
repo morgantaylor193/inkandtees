@@ -5,6 +5,7 @@ import { AppComponent } from './app';
 import { IntHomePageModule } from 'src/containers/home/home.module';
 import { IntContactPageModule } from 'src/containers/contact/contact.module';
 import { IntTShirtsPageModule } from 'src/containers/t-shirts/t-shirts.module';
+import { IntApparelPageModule } from 'src/containers/apparel/apparel.module';
 import { SharedModule } from 'src/modules/shared.module';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SharedModule } from 'src/modules/shared.module';
     Routing,
     IntHomePageModule,
     IntContactPageModule,
-    IntTShirtsPageModule
+    IntTShirtsPageModule,
+    IntApparelPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { IntTShirts } from './t-shirts';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FeatureImage } from 'src/components/feature-image/feature-image';
 
 describe('IntTShirts', () => {
   beforeEach(async(() => {
@@ -9,7 +10,8 @@ describe('IntTShirts', () => {
         RouterTestingModule
       ],
       declarations: [
-        IntTShirts
+        IntTShirts,
+        FeatureImage
       ]
     }).compileComponents();
   }));

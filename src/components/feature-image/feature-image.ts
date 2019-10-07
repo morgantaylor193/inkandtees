@@ -12,6 +12,5 @@ export class FeatureImage implements OnInit{
 
   ngOnInit(){
     this.backgroundImage = `url(${this.backgroundImage})`;
-    console.log(this.backgroundImage);
   }
 }

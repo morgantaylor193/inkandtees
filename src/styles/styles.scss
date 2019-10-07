@@ -9,7 +9,11 @@ body {
 
 a {
 	text-decoration: none;
-	color: $primaryColor;
+  color: $secondaryColor;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 p {

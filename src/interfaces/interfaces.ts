@@ -12,3 +12,10 @@ export interface INavItem {
   url: string,
   label: string
 }
+
+export interface IApparelBrand {
+  id: string,
+  name: string,
+  logo: string,
+  description: string
+}
