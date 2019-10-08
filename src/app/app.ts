@@ -17,8 +17,12 @@ export class AppComponent implements OnInit{
     this.navigation = {
       leftNav: [
         {
-          url: this._linkHelper.tShirtPage(),
-          label: 'Custom T Shirts'
+          url: this._linkHelper.pricingPage(),
+          label: 'Pricing & Packages'
+        },
+        {
+          url: this._linkHelper.apparelPage(),
+          label: 'Apparel'
         }
       ],
       rightNav: [

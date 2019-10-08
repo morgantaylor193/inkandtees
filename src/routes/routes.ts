@@ -1,8 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
 import { IntHome } from 'src/containers/home/home';
-import { IntTShirts } from 'src/containers/t-shirts/t-shirts';
+import { IntPricing } from 'src/containers/pricing/pricing';
 import { IntContact } from 'src/containers/contact/contact';
 import { IntApparel } from 'src/containers/apparel/apparel';
+import { IntApparelBrand } from 'src/containers/apparel-brand/apparel-brand';
 
 const APP_ROUTES: Routes = [
   { path: '',
@@ -10,9 +11,9 @@ const APP_ROUTES: Routes = [
     component: IntHome
   },
   {
-    path: 't-shirts',
+    path: 'pricing',
     pathMatch: 'full',
-    component: IntTShirts
+    component: IntPricing
   },
   {
     path: 'contact',
@@ -20,9 +21,14 @@ const APP_ROUTES: Routes = [
     component: IntContact
   },
   {
-    path: 'apparel/:id',
+    path: 'apparel',
     pathMatch: 'full',
     component: IntApparel
+  },
+  {
+    path: 'apparel/:id',
+    pathMatch: 'full',
+    component: IntApparelBrand
   }
 ];
 

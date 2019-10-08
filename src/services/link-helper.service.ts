@@ -11,11 +11,15 @@ export class LinkHelper {
 		return '/contact';
   }
 
-  public tShirtPage() {
-		return '/t-shirts';
+  public pricingPage() {
+		return '/pricing';
   }
 
-  public apparelPage(id) {
+  public apparelPage() {
+    return `/apparel`;
+  }
+
+  public apparelBrandPage(id) {
     return `/apparel/${id}`;
   }
 }

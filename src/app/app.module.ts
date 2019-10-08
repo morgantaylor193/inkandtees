@@ -4,9 +4,10 @@ import { Routing } from 'src/routes/routes';
 import { AppComponent } from './app';
 import { IntHomePageModule } from 'src/containers/home/home.module';
 import { IntContactPageModule } from 'src/containers/contact/contact.module';
-import { IntTShirtsPageModule } from 'src/containers/t-shirts/t-shirts.module';
 import { IntApparelPageModule } from 'src/containers/apparel/apparel.module';
 import { SharedModule } from 'src/modules/shared.module';
+import { IntPricingPageModule } from 'src/containers/pricing/pricing.module';
+import { IntApparelBrandPageModule } from 'src/containers/apparel-brand/apparel-brand.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { SharedModule } from 'src/modules/shared.module';
     Routing,
     IntHomePageModule,
     IntContactPageModule,
-    IntTShirtsPageModule,
-    IntApparelPageModule
+    IntApparelBrandPageModule,
+    IntApparelPageModule,
+    IntPricingPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

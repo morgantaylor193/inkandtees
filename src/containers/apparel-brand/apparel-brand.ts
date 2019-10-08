@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IApparelBrand } from 'src/interfaces/interfaces';
-import { LinkHelper } from 'src/services/link-helper.service';
 
 @Component({
-  selector: 'apparel',
-  templateUrl: './apparel.html',
-  styleUrls: ['./apparel.scss']
+  selector: 'apparel-brand',
+  templateUrl: './apparel-brand.html',
+  styleUrls: ['./apparel-brand.scss']
 })
 
-export class IntApparel implements OnInit {  
+export class IntApparelBrand implements OnInit {  
   public id = '';
   public brandName = '';
   public apparelBrand: IApparelBrand;
@@ -40,16 +39,11 @@ export class IntApparel implements OnInit {
     }
   ];
 
-  constructor( private _route: ActivatedRoute,
-    private _linkHelper: LinkHelper ) {
+  constructor( private _route: ActivatedRoute ) {
     this.id = this._route.snapshot.paramMap.get("id");
   }
   
   ngOnInit() {
     this.apparelBrand = this._apparelBrands.find(brand => brand.id === this.id);
-  }
-
-  public buildApparelUrl(id) {
-    return this._linkHelper.apparelBrandPage(id);
   }
 }
