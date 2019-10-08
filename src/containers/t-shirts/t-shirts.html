@@ -1,26 +1,83 @@
 <feature-image backgroundImage="../../assets/img/feature-image.jpg" pageTitle="Custom T-Shirts"></feature-image>
 <div class="page-padding">
+  <section class="section">
+    <h2>Pricing</h2>
+    <p>We offer <i>FREE QUOTE</i> on all of our services and will price match any other written quote from another Phoenix based company. We offer a wide range of clothing styles, fabric textures and color options so please use the below charts as examples. For a more accurate quote please <a [routerLink]="contactUrl">contact us today</a>.</p>
+  </section>
+</div>
+<div class="banner">
+  <div>Still deciding on which product?</div>
+  <div class="button">View All Apparel</div>
+</div>
+<div class="page-padding">
+  <section class="section">
+    <h2>Packages</h2>
+    <p>You won’t beat our bundle offers! We offer the cheapest prices in the Phoenix Metro area and will match any written quote. Our packages are designed to be the fastest turnaround and unfortunately can not be deviated from. If you are looking for something more custom please and <a [routerLink]="contactUrl">contact us today</a> for a <i>FREE QUOTE</i>.</p>
 
-  <h2>Pricing</h2>
-  <p>Our prices are designed to give you more price breaks with lower quantities so you are always saving on costs no matter how many you order. The pricing below is only a few examples of our low costs services. We offer a wide range of clothing styles, fabric textures, and color options. Check out our Apparel page for more info. We can print up to 6 colors and handle any quantity so please contact us for a custom quote if needed.</p>
-
-  <h2>Packages</h2>
-  <p>Our pre-made bundles offer the cheapest prices you will find. All the packages below are ONE COLOR, ONE LOCATION. Sorry, we cannot add any additional colors, locations, or alter quantities. These are designed for low cost and fast turnaround. If you need something outside of what is offered here please check out our pricing page or contact us for a quick custom quote.</p>
-
-  <h2>Apparel</h2>
-  <p>Ink & Tees uses the highest quality apparel brands. Each of the brands we use provides a wide selection of items in a range of colors and materials. We are able to print on any of their apparel products, not just t-shirts. Browse through the range of products below and <a [routerLink]="contactUrl">contact us today</a> for a <i>FREE QUOTE</i>.</p>
-  <div class="brand-container">
-    <a [routerLink]="buildApparelUrl('gildan')" class="brand-item">
-      <img src="../../assets/img/gildan-logo.jpg" class="brand-logo" alt="Gildan Logo">
-    </a>
-    <a [routerLink]="buildApparelUrl('nextLevel')" class="brand-item">
-      <img src="../../assets/img/next-level-logo.jpg" class="brand-logo" alt="Next Level Apparel Logo">
-    </a>
-    <a [routerLink]="buildApparelUrl('bellaCanvas')" class="brand-item">
-      <img src="../../assets/img/bella-canvas-logo.jpg" class="brand-logo" alt="Bella + Canvas Logo">
-    </a>
-    <a [routerLink]="buildApparelUrl('hanes')" class="brand-item">
-      <img src="../../assets/img/hanes-logo.jpg" class="brand-logo" alt="Hanes Logo">
-    </a>
-  </div>
+    <div class="table">
+      <div class="table-body">
+        <div class="table-row">
+          <div class="table-cell">Apparel</div>
+          <div class="table-cell">Quanity</div>
+          <div class="table-cell">Price</div>
+          <div class="table-cell">Sizes</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell description">Colored Gildan 6.1 oz Ultra Cotton Tee</div>
+          <div class="table-cell">25</div>
+          <div class="table-cell">$5.50</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell description">White Gildan 6.1 oz Ultra Cotton Tee</div>
+          <div class="table-cell">25</div>
+          <div class="table-cell">$4.50</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell description">Mens Next Level 60/40 blend 4.3 oz Crew or V-Neck</div>
+          <div class="table-cell">25</div>
+          <div class="table-cell">$6.50</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell description">Womens Next Level 60/40 blend 4.3 oz Crew or V-Neck</div>
+          <div class="table-cell">25</div>
+          <div class="table-cell">$6.50</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+          </div>
+        <div class="table-row">
+          <div class="table-cell description">Colored Gildan 6.1 oz Ultra Cotton Tee&nbsp;</div>
+          <div class="table-cell">100</div>
+          <div class="table-cell">$4.50</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell description">White Gildan 6.1 oz Ultra Cotton Tee</div>
+          <div class="table-cell">100</div>
+          <div class="table-cell">$3.75</div>
+          <div class="table-cell">S-XL<sup>*</sup></div>
+        </div>
+      </div>
+    </div>
+    <span class="note"><sup>*</sup>(2XL add $2 per shirt, 3XL and up add $2.50 per shirt)</span>
+  </section>
+  <section class="section">
+    <h2>Apparel</h2>
+    <p>Ink & Tees uses the highest quality apparel brands. Each of the brands we use provides a wide selection of items in a range of colors and materials. We are able to print on any of their apparel products, not just t-shirts. Btable-rowse through the range of products below and <a [routerLink]="contactUrl">contact us today</a> for a <i>FREE QUOTE</i>.</p>
+    <div class="brand-container">
+      <a [routerLink]="buildApparelUrl('gildan')" class="brand-item">
+        <img src="../../assets/img/gildan-logo.jpg" class="brand-logo" alt="Gildan Logo">
+      </a>
+      <a [routerLink]="buildApparelUrl('nextLevel')" class="brand-item">
+        <img src="../../assets/img/next-level-logo.jpg" class="brand-logo" alt="Next Level Apparel Logo">
+      </a>
+      <a [routerLink]="buildApparelUrl('bellaCanvas')" class="brand-item">
+        <img src="../../assets/img/bella-canvas-logo.jpg" class="brand-logo" alt="Bella + Canvas Logo">
+      </a>
+      <a [routerLink]="buildApparelUrl('hanes')" class="brand-item">
+        <img src="../../assets/img/hanes-logo.jpg" class="brand-logo" alt="Hanes Logo">
+      </a>
+    </div>
+  </section>
 </div>
