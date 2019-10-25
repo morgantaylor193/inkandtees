@@ -1,14 +1,126 @@
 @import '../../styles/variables.scss';
 
 :host {
-  .sub-footer {
-    background-color: $primaryColor;
+  .social-footer {
+    background-color: $gray;
     padding: 1rem;
+
+    .social-title {
+      font-size: $vwM;
+      padding-bottom:0.5rem;
+      text-align: center;
+    }
+
+    .social-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      max-width: $phoneBreakpoint;
+      margin: 0 auto;
+
+      .social-icon {
+        width: 10vw;
+        height: 10vw;
+        padding: 1rem 5vw 0 5vw;
+      }
+    }
+  }
+
+  .link-container {
+    background: $black;
+    
+    .link-swamp {
+      display: flex;
+      flex-direction: column;
       
-    .site-credit {
-      color: $secondaryColor;
-      font-weight: $fontWeightLight;
-      font-size: $remS;
+      .swamp-item {
+        color: $white;
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tabletBreakPoint) {  
+    .social-footer {
+
+      .social-title {
+        font-size: $remM;
+      }
+
+      .social-inner {
+        .social-icon {
+          width: 2rem;
+          height: 2rem;
+          padding: 1rem 1rem 0 1rem;
+        }
+      }
     }
   }
 }
+
+// :host {
+//   background: $gray;
+//   display: block;
+
+//   .flex-container {
+//     display: flex;
+//     justify-content: space-between;
+
+//     .flex-col {
+//       display: flex;
+//       flex-direction: column;
+
+//       .footer-title {
+//         margin-bottom: 1rem;
+//       }
+//       .footer-nav-item {
+//         padding: 0.4rem 0;
+//         color: $black;
+//       }
+//       .social {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         .social-icon {
+//           width: 10vw;
+//           height: 10vw;
+//           margin: 0 2.5vw;
+//           cursor: pointer;
+
+//           &:hover {
+//             opacity: 0.6;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .sub-footer {
+//     background-color: $primaryColor;
+      
+//     .site-credit {
+//       color: $secondaryColor;
+//       font-weight: $fontWeightLight;
+//       font-size: $vwS;
+//     }
+//   }
+
+//   @media screen and (min-width: $tabletBreakPoint) {  
+//     .flex-container {
+//       .flex-col {
+//         .social {
+//           .social-icon {
+//             width: 2rem;
+//             height: 2rem;
+//             margin: 0 0.5rem;
+//           }
+//         }
+//       }
+//     }
+//     .sub-footer {        
+//       .site-credit {
+//         font-size: $remS;
+//       }
+//     }
+//   }
+// }

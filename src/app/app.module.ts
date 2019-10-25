@@ -8,6 +8,8 @@ import { IntApparelPageModule } from 'src/containers/apparel/apparel.module';
 import { SharedModule } from 'src/modules/shared.module';
 import { IntPricingPageModule } from 'src/containers/pricing/pricing.module';
 import { IntApparelBrandPageModule } from 'src/containers/apparel-brand/apparel-brand.module';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { IntApparelBrandPageModule } from 'src/containers/apparel-brand/apparel-
     IntContactPageModule,
     IntApparelBrandPageModule,
     IntApparelPageModule,
-    IntPricingPageModule
+    IntPricingPageModule,
+    HttpClientJsonpModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

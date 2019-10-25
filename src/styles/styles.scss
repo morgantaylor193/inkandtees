@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Sanchez&display=swap');
 @import '../../node_modules/reset-css/sass/_reset.scss';
 @import '../styles/variables.scss';
+@import '../styles/animations.scss';
 
 body {
-	font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
+  animation: fadeIn 0.5s ease-in;
 }
 
 a {
@@ -22,6 +24,7 @@ p {
 }
 
 h1, h2, h3, h4 {
+  font-weight: $fontWeightBold;
   font-family: 'Sanchez', serif;
 }
 

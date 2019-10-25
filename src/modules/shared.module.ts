@@ -5,18 +5,22 @@ import { LinkHelper } from 'src/services/link-helper.service';
 import { HeaderCenter } from 'src/components/header-center/header-center';
 import { Footer } from 'src/components/footer/footer';
 import { FeatureImage } from 'src/components/feature-image/feature-image';
+import { CEMailchimpSubscribe } from 'src/components/ce-mailchimp-subscribe/ce-mailchimp-subscribe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, ReactiveFormsModule],
   declarations: [
     HeaderCenter,
     Footer,
-    FeatureImage
+    FeatureImage,
+    CEMailchimpSubscribe
   ],
   exports: [
     HeaderCenter,
     Footer,
-    FeatureImage
+    FeatureImage,
+    CEMailchimpSubscribe
   ],
   providers: [
     LinkHelper

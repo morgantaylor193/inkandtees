@@ -14,16 +14,16 @@ export class IntApparelBrand implements OnInit {
   public apparelBrand: IApparelBrand;
   private _apparelBrands: IApparelBrand[] = [
     {
-      id: "gildan",
-      name: "Gildan",
-      logo: "../../assets/img/gildan-logo.jpg",
-      description: "Gildan is the basic apparel brand that gets all the details right because we understand the way you live your life. We start with high-quality fabric so all our clothes shrink less and last longer. Our shirts are reinforced with finished neck and shoulder seams so they hold their shape better and provide extra comfort.",
-    },
-    {
       id: "nextLevel",
       name: "Next Level",
       logo: "../../assets/img/next-level-logo.jpg",
       description: "Next Level Apparel delivers the latest fashions with superb quality incorporating innovative fabrics that are heavenly soft at a value that is second to none. Our outstanding color palette, up to date styles and fit continue to define us as one of the leading suppliers of fashion blanks in the US market.",
+    },
+    {
+      id: "gildan",
+      name: "Gildan",
+      logo: "../../assets/img/gildan-logo.jpg",
+      description: "Gildan is the basic apparel brand that gets all the details right because we understand the way you live your life. We start with high-quality fabric so all our clothes shrink less and last longer. Our shirts are reinforced with finished neck and shoulder seams so they hold their shape better and provide extra comfort.",
     },
     {
       id: "bellaCanvas",

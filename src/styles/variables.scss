@@ -1,8 +1,9 @@
-$primaryColor: #1C1F21;
-$secondaryColor: #92683C;
+$primaryColor: #92703A;
+$black: #212226;
+$gray: #ECEBE7;
 $white: #FFFFFF;
-$black: #595858;
-$gray: #cecece;
+
+$secondaryColor: #92683C;
 $red: #f74e50;
 
 $buttonBorderRadius: 30px;
@@ -21,6 +22,20 @@ $fontWeightLight: 300;
 $fontWeightNormal: 400;
 $fontWeightBold: 700;
 
+
+// Initial Font Sizes
+$vwXXXXL: 17.5vw;
+$vwXXXL: 8.5vw;
+$vwXXL: 6.4vw;
+$vwXL: 4.8vw;
+$vwL: 4.4vw;
+$vwM: 4vw;
+$vwS: 3.6vw;
+$vwXS: 2.8vw;
+$vwXXS: 2.4vw;
+
+// Capped Font Sizes
+$remXXXXL: 4rem;
 $remXXXL: 2rem;
 $remXXL: 1.45rem;
 $remXL: 1.1rem;

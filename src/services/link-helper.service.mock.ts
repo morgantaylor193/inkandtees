@@ -9,7 +9,15 @@ export class MockLinkHelper {
     return this.__genericLinkResult;
   }
 
-  public tShirtPage() {
+  public pricingPage() {
+    return this.__genericLinkResult;
+  }
+
+  public apparelPage() {
+    return this.__genericLinkResult;
+  }
+
+  public apparelBrandPage(id) {
     return this.__genericLinkResult;
   }
 }
