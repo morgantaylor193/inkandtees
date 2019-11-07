@@ -4,25 +4,18 @@
 @import '../styles/variables.scss';
 
 body {
-	font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
 	text-decoration: none;
-  color: $secondaryColor;
-  
-  &:hover {
-    text-decoration: underline;
-  }
+  cursor: pointer;
+  color: $black;
 }
 
 p {
   line-height: 1.2;
   margin-bottom: 0.5rem;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Sanchez', serif;
 }
 
 h1 {

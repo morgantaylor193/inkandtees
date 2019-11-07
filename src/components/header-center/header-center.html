@@ -1,31 +1,35 @@
-<div class="pre-header">FREE Shipping nation wide on all orders over 100 tees!</div>
-<div class="inner-container">
-  <div class="mobile-nav">  
-    <img class="logo" [routerLink]="navObject.logoNav.url" src="{{navObject.logoNav.logoUrl}}" alt="{{navObject.logoNav.altText}}">
-    <span class="hamburger" (click)="openNav()">Hamburger</span>
+<nav class="navigation" [ngClass]="{'is-open': displayMobNav}">
+  <img class="mobile-nav-logo" src="{{navObject.logoNav.logoSmallUrl}}" [routerLink]="navObject.logoNav.url" alt="{{navObject.logoNav.altText}}">
+  <span (click)="closeNav()" class="close"></span>
 
-    <nav class="navigation" *ngIf="displayMobNav">
-      <span (click)="closeNav()" class="close">Close</span>
-      <span (click)="closeNav()" class="nav-item" [routerLink]="navObject.logoNav.url">Home</span>
-      <div *ngFor="let item of navObject.leftNav">
-        <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-      </div>
-      <div *ngFor="let item of navObject.rightNav">
-        <span (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-      </div>
-    </nav>
-  </div>  
-  <nav class="desktop-nav">
+  <div class="nav-item-container">
+      <a (click)="closeNav()" class="nav-item" [routerLink]="navObject.logoNav.url">Home</a>
+  </div>
+  <div class="nav-item-container" *ngFor="let item of navObject.leftNav">
+    <a (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</a>
+  </div>
+  <div class="nav-item-container" *ngFor="let item of navObject.rightNav">
+    <a (click)="closeNav()" [routerLink]="item.url" class="nav-item">{{item.label}}</a>
+  </div>
+</nav>
+<div class="ce-nav">
+  <div class="ce-nav-inner">
+    <div class="hamburger-button" (click)="openNav()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>  
     <div class="left-nav">
-      <div *ngFor="let item of navObject.leftNav">
-        <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-      </div>
+        <div *ngFor="let item of navObject.leftNav">
+            <a [routerLink]="item.url" class="nav-item">{{item.label}}</a>
+          </div>  </div>
+    <div class="logo-container">
+      <img class="logo" src="{{navObject.logoNav.logoUrl}}" [routerLink]="navObject.logoNav.url" alt="{{navObject.logoNav.altText}}">
     </div>
-    <img class="logo" [routerLink]="navObject.logoNav.url" src="{{navObject.logoNav.logoUrl}}" alt="{{navObject.logoNav.altText}}">
     <div class="right-nav">
-      <div *ngFor="let item of navObject.rightNav">
-        <span [routerLink]="item.url" class="nav-item">{{item.label}}</span>
-      </div>
+        <div *ngFor="let item of navObject.rightNav">
+            <a [routerLink]="item.url" class="nav-item">{{item.label}}</a>
+        </div>  
     </div>
-  </nav>
+  </div>
 </div>

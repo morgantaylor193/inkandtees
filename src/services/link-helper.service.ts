@@ -15,11 +15,11 @@ export class LinkHelper {
 		return '/pricing';
   }
 
-  public apparelPage() {
-    return `/apparel`;
+  public aboutPage() {
+    return `/about`;
   }
 
-  public apparelBrandPage(id) {
-    return `/apparel/${id}`;
+  public productPage(id) {
+    return `/product/${id}`;
   }
 }

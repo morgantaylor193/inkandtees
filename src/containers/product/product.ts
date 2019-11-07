@@ -4,12 +4,12 @@ import { IApparelBrand } from 'src/interfaces/interfaces';
 import { LinkHelper } from 'src/services/link-helper.service';
 
 @Component({
-  selector: 'apparel',
-  templateUrl: './apparel.html',
-  styleUrls: ['./apparel.scss']
+  selector: 'product',
+  templateUrl: './product.html',
+  styleUrls: ['./product.scss']
 })
 
-export class IntApparel implements OnInit {  
+export class IntProduct implements OnInit {  
   public id = '';
   public brandName = '';
   public apparelBrand: IApparelBrand;
@@ -40,8 +40,7 @@ export class IntApparel implements OnInit {
     }
   ];
 
-  constructor( private _route: ActivatedRoute,
-    private _linkHelper: LinkHelper ) {
+  constructor( private _route: ActivatedRoute, private _linkHelper: LinkHelper ) {
     this.id = this._route.snapshot.paramMap.get("id");
   }
   
@@ -50,6 +49,6 @@ export class IntApparel implements OnInit {
   }
 
   public buildApparelUrl(id) {
-    return this._linkHelper.apparelBrandPage(id);
+    return this._linkHelper.productPage(id);
   }
 }

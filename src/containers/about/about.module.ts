@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../modules/shared.module';
-import { IntApparelBrand } from './apparel-brand';
+import { IntAbout } from './about';
 
 @NgModule({
   imports: [
@@ -14,15 +14,15 @@ import { IntApparelBrand } from './apparel-brand';
       {
         path: '',
         pathMatch: 'full',
-        component: IntApparelBrand
+        component: IntAbout
       }
     ])
   ],
   declarations: [
-    IntApparelBrand
+    IntAbout
   ],
-  exports: [IntApparelBrand],
+  exports: [IntAbout],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class IntApparelBrandPageModule {}
+export class IntApparelPageModule {}

@@ -8,6 +8,7 @@
     margin-top: -4rem;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     .page-padding {
       position: relative;
@@ -22,5 +23,8 @@
         text-shadow: 2px 2px $black;
       }
     }
+  }
+  @media screen and (min-width: $tabletBreakPoint) {
+ 
   }
 }

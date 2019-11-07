@@ -1,5 +1,15 @@
+@import '../styles/variables.scss';
+
 :host {
   .header-offset {
-    padding-top: 12rem;
+    padding-top: 8.5rem;
+    transition: padding-top 0.3s ease-in-out;
+  }
+
+
+  @media screen and (min-width: $tabletBreakPoint) {
+    .header-offset {
+      padding-top: 11rem;
+    }
   }
 }

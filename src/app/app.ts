@@ -17,23 +17,28 @@ export class AppComponent implements OnInit{
     this.navigation = {
       leftNav: [
         {
-          url: this._linkHelper.pricingPage(),
-          label: 'Pricing & Packages'
+          url: this._linkHelper.productPage(2),
+          label: 'Products'
         },
         {
-          url: this._linkHelper.apparelPage(),
-          label: 'Apparel'
+          url: this._linkHelper.pricingPage(),
+          label: 'Pricing'
         }
       ],
       rightNav: [
         {
+          url: this._linkHelper.aboutPage(),
+          label: 'About'
+        },
+        {
           url: this._linkHelper.contactPage(),
-          label: 'Contact Us'
+          label: 'Contact'
         }
       ],
       logoNav: {
         url: this._linkHelper.homePage(),
         logoUrl: '../../assets/img/logo.svg',
+        logoSmallUrl:'../../assets/img/logo-small.svg',
         altText: 'Ink & Tees Logo'
       }
     }
