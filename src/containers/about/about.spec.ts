@@ -1,23 +1,28 @@
 import { TestBed, async } from '@angular/core/testing';
-import { IntApparelBrand } from './apparel-brand';
+import { IntAbout } from './about';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FeatureImage } from 'src/components/feature-image/feature-image';
+import { LinkHelper } from 'src/services/link-helper.service';
+import { MockLinkHelper } from 'src/services/link-helper.service.mock';
 
-describe('IntApparelBrand', () => {
+describe('IntApparel', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        IntApparelBrand,
+        IntAbout,
         FeatureImage
+      ],
+      providers: [
+        { provide: LinkHelper, useClass: MockLinkHelper },
       ]
     }).compileComponents();
   }));
 
   it('should create the home container', () => {
-    const fixture = TestBed.createComponent(IntApparelBrand);
+    const fixture = TestBed.createComponent(IntAbout);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });

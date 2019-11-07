@@ -2,8 +2,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IntHome } from 'src/containers/home/home';
 import { IntPricing } from 'src/containers/pricing/pricing';
 import { IntContact } from 'src/containers/contact/contact';
-import { IntApparel } from 'src/containers/apparel/apparel';
-import { IntApparelBrand } from 'src/containers/apparel-brand/apparel-brand';
+import { IntAbout } from 'src/containers/about/about';
+import { IntProduct} from 'src/containers/product/product';
 
 const APP_ROUTES: Routes = [
   { path: '',
@@ -21,14 +21,14 @@ const APP_ROUTES: Routes = [
     component: IntContact
   },
   {
-    path: 'apparel',
+    path: 'about',
     pathMatch: 'full',
-    component: IntApparel
+    component: IntAbout
   },
   {
-    path: 'apparel/:id',
+    path: 'product/:id',
     pathMatch: 'full',
-    component: IntApparelBrand
+    component: IntProduct
   }
 ];
 
