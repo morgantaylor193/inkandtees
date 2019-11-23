@@ -1,12 +1,32 @@
 <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()" autocomplete="on">
-  <label>
-    Name:
-    <input type="text" formControlName="name">
-  </label>
-  <label>
+  <!-- <label>
     Email:
-    <input type="text" formControlName="email">
-  </label>
+    <input type="text" formControlName="email" placeholder="Email Address">
+  </label> -->
+
+  <div class="field">
+    <input class="input-field"
+      type="email"
+      formControlName="email"
+      name="email"
+      id="email"
+      placeholder="Email Address"
+      (blur)="handleBlur()"
+      autocomplete="on">
+    <label for="email" class="input-label">Subscribe for Updates</label>
+    <div class="message error">{{errorMsg}}</div>
+    <div *ngIf="submitted" class="message success">{{successMsg}}</div>
+
+    <button type="submit"
+      class="submit-button"
+      [ngClass]="{ 'active-submit' : subscribeForm.valid }"
+      [disabled]="!subscribeForm.valid">
+      Send
+    </button>
+  </div>
+  
+
+
+
   <input hidden type="text" name="b_dc689105a468d4f66ddf72f1c_29f8943dab" tabindex="-1" value="">
-  <button type="submit" class="standard-button">Subscribe</button>
 </form>

@@ -5,17 +5,14 @@
 @import '../styles/animations.scss';
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   animation: fadeIn 0.5s ease-in;
 }
 
 a {
 	text-decoration: none;
-  color: $secondaryColor;
-  
-  &:hover {
-    text-decoration: underline;
-  }
+  cursor: pointer;
+  color: $black;
 }
 
 p {

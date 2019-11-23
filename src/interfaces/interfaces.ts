@@ -4,6 +4,7 @@ export interface INavigation {
   logoNav: {
     url: string,
     logoUrl: string,
+    logoSmallUrl:string,
     altText: string
   }
 }
